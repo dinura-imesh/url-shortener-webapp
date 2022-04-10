@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #fff;
 }
 
 .App-logo {
@@ -35,4 +36,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.content-height {
+  height: calc(100vh - 3.5rem);
 }
