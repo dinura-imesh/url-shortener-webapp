@@ -2,7 +2,7 @@ import React from "react";
 
 export const Docs = () => {
   return (
-    <div className="grid grid-cols-2">
+    <div className="grid-2">
       <div className="border text-left p-4 m-4 box-border">
         <div className="text-lg font-medium text-green-500">POST</div>
         <div className="bg-slate-200 rounded-sm px-2 py-1 mt-2 text-sm">

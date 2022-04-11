@@ -18,9 +18,7 @@ export const HomePage = () => {
       const response = await getApiKey();
       if (response.status === 200) {
         setApiKey(response.data.apiKey);
-        setTimeout(() => {
-          setIsLoading(false);
-        }, 1000);
+        setIsLoading(false);
       }
     } catch (error) {}
   };

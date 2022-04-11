@@ -29,7 +29,6 @@ export const SignUpLayout = ({
       const response = await signUp(email, firstName, lastName, password);
       if (response.data.status === "SIGNED_IN") {
         setAuthTokens(response.data.authToken, response.data.refreshToken);
-        await generateApiKey();
         const userResponse = await getUser();
         onSignUp?.(userResponse.data as IUser);
       } else {

@@ -5,9 +5,7 @@ import { refreshTokens } from "./services/auth.service";
 import { IAuthTokens } from "./types/authTokens.type";
 
 export const axiosInstance = axios.create({
-  baseURL: "http://localhost:8000/",
-  timeout: 1000,
-  headers: { "X-Custom-Header": "foobar" },
+  baseURL: "https://nek-tk.herokuapp.com/a/",
 });
 
 axiosInstance.interceptors.response.use(
