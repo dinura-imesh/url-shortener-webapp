@@ -41,14 +41,14 @@ export const http = {
   get: async (url: string, config?: AxiosRequestConfig) => {
     return await axiosInstance.get(url, config);
   },
-  post: async (url: string, data: any, config?: AxiosRequestConfig) => {
+  post: async (url: string, data?: any, config?: AxiosRequestConfig) => {
     return await axiosInstance.post(url, data, config);
   },
   withToken: {
     get: async (url: string, config?: AxiosRequestConfig) => {
       return await axiosInstance.get(url, getConfigWithTokens(config));
     },
-    post: async (url: string, data: any, config?: AxiosRequestConfig) => {
+    post: async (url: string, data?: any, config?: AxiosRequestConfig) => {
       return await axiosInstance.post(url, data, getConfigWithTokens(config));
     },
   },

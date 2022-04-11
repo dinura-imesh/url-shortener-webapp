@@ -40,7 +40,15 @@ export const AuthContainer: React.FC = (props) => {
   const getAuthLayout = () => {
     switch (authState) {
       case EnumAuthState.SIGN_UP:
-        return <SignUpLayout onStateChange={(e) => setAuthState(e)} />;
+        return (
+          <SignUpLayout
+            onStateChange={(e) => setAuthState(e)}
+            onSignUp={(userData: IUser) => {
+              setUser(userData);
+              setAuthState(EnumAuthState.SIGNED_IN);
+            }}
+          />
+        );
       default:
         return (
           <SignInLayout

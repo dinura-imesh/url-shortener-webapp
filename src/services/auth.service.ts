@@ -11,6 +11,20 @@ export const signIn = async (email: string, password: string) => {
   });
 };
 
+export const signUp = async (
+  email: string,
+  firstName: string,
+  lastName: string,
+  password: string
+) => {
+  return await http.post(`${serviceUrl}signup`, {
+    email: email,
+    firstName: firstName,
+    lastName: lastName,
+    password: password,
+  });
+};
+
 export const refreshTokens = async (refreshToken: string) => {
   const response = await http.post(`${serviceUrl}refresh`, {
     refreshToken: getAuthTokens().refreshToken,
