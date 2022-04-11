@@ -8,9 +8,9 @@ import { routes } from "./routes/routes";
 function App() {
   return (
     <div className="App">
-      <AuthContainer>
-        <Navbar fullNavbar />
-        <Router>
+      <Router>
+        <AuthContainer>
+          <Navbar fullNavbar />
           <Routes>
             {routes.map((route) => (
               <Route
@@ -20,8 +20,8 @@ function App() {
               />
             ))}
           </Routes>
-        </Router>
-      </AuthContainer>
+        </AuthContainer>
+      </Router>
     </div>
   );
 }
